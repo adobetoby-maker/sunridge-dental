@@ -22,7 +22,7 @@ export default function Navigation() {
         <Link href="/" className="flex items-center gap-2">
           <span
             className="text-xl font-extrabold tracking-tight"
-            style={{ fontFamily: 'Nunito, sans-serif', color: '#0EA5E9' }}
+            style={{ color: '#0EA5E9' }}
           >
             Sunridge Dental Group
           </span>

@@ -15,4 +15,11 @@ create table appointments (
   status text default 'pending'
 );
 alter table appointments enable row level security;
-create policy "service role only" on appointments using (auth.role() = 'service_role');
+
+create policy "anon can insert appointments" on appointments
+  for insert
+  with check (true);
+
+create policy "service role can read appointments" on appointments
+  for select
+  using ((select auth.jwt() ->> 'role') = 'service_role');

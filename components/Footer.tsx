@@ -9,7 +9,6 @@ export default function Footer() {
           <div>
             <h3
               className="text-white text-lg font-extrabold mb-3"
-              style={{ fontFamily: 'Nunito, sans-serif' }}
             >
               Sunridge Dental Group
             </h3>
@@ -31,7 +30,6 @@ export default function Footer() {
           <div>
             <h3
               className="text-white text-lg font-extrabold mb-3"
-              style={{ fontFamily: 'Nunito, sans-serif' }}
             >
               Office Hours
             </h3>
@@ -55,7 +53,6 @@ export default function Footer() {
           <div>
             <h3
               className="text-white text-lg font-extrabold mb-3"
-              style={{ fontFamily: 'Nunito, sans-serif' }}
             >
               Quick Links
             </h3>
