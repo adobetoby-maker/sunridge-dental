@@ -355,7 +355,8 @@ function Step3({
   onSubmit: () => void
   submitting: boolean
 }) {
-  const canSubmit = form.patientName.trim() && form.phone.trim() && form.email.trim()
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)
+  const canSubmit = form.patientName.trim() && form.phone.trim() && emailValid
 
   return (
     <div>

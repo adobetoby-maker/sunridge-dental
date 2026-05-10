@@ -2,6 +2,21 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
 
+interface AppointmentInsert {
+  patient_type: string
+  patient_name: string
+  dob: string | null
+  phone: string
+  email: string
+  service_type: string
+  preferred_date: string | null
+  preferred_time: string
+  doctor_preference: string
+  insurance_carrier: string
+  notes: string
+  status: string
+}
+
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
@@ -31,10 +46,15 @@ export async function POST(req: Request) {
   if (!patientType || !serviceType || !patientName || !phone || !email) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
   }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(email)) {
+    return NextResponse.json({ error: 'Invalid email address' }, { status: 400 })
+  }
   if (
     patientName.length > 100 ||
     phone.length > 30 ||
     email.length > 200 ||
+    insuranceCarrier.length > 200 ||
     notes.length > 2000
   ) {
     return NextResponse.json({ error: 'Input too long' }, { status: 400 })
@@ -42,7 +62,7 @@ export async function POST(req: Request) {
 
   // 2. Insert to Supabase
   const supabase = createAdminClient()
-  const appointmentRow = {
+  const appointmentRow: AppointmentInsert = {
     patient_type: patientType,
     patient_name: patientName,
     dob: dob || null,
@@ -50,7 +70,7 @@ export async function POST(req: Request) {
     email,
     service_type: serviceType,
     preferred_date: preferredDate || null,
-    preferred_time: preferredTime,
+    preferred_time: preferredTime || 'Flexible',
     doctor_preference: doctorPreference,
     insurance_carrier: insuranceCarrier,
     notes,
