@@ -18,7 +18,7 @@ export default function NewPatientSpecial() {
             New Patient Special
           </span>
           <h2 className="text-4xl font-bold text-white">
-            First Exam + X-Rays — $99
+            $99 First Exam + X-Rays
           </h2>
           <p className="mt-4 text-lg text-white/90 max-w-xl mx-auto">
             For patients without dental insurance. Digital X-rays included. Offer valid for new patients only.

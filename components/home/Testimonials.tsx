@@ -12,7 +12,7 @@ const testimonials = [
   {
     stars: 5,
     quote: 'My kids actually look forward to their dental appointments. Dr. Reyes is incredible with children.',
-    author: 'Mike & Jenny L.',
+    author: 'Jenny L.',
     city: 'Kimberly',
   },
   {

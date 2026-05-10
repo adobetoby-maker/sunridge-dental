@@ -20,7 +20,7 @@ const doctors = [
     specialty: 'General Dentistry & Invisalign Gold',
     years: '9 years experience',
     school: 'University of Washington',
-    image: 'https://images.unsplash.com/_4xStiTXY1o?w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&auto=format&fit=crop',
     alt: 'Dr. Marcus Webb — General Dentistry & Invisalign',
   },
   {
@@ -29,7 +29,7 @@ const doctors = [
     specialty: 'Pediatric & General Dentistry',
     years: '6 years experience',
     school: 'University of Colorado',
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/_4xStiTXY1o?w=800&auto=format&fit=crop',
     alt: 'Dr. Sofia Reyes — Pediatric & General Dentistry',
   },
 ]
