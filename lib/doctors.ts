@@ -44,7 +44,7 @@ export const doctors: Doctor[] = [
     years: 9,
     school: 'University of Washington School of Dentistry',
     degree: 'Doctor of Dental Medicine (DMD)',
-    image: 'https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&auto=format&fit=crop',
     imageAlt: 'Dr. Marcus Webb — General Dentist & Invisalign Provider at Sunridge Dental',
     tagline: 'Helping patients achieve straight, healthy smiles — comfortably.',
     bio: 'Dr. Marcus Webb is a graduate of the University of Washington School of Dentistry with 9 years of clinical experience in general dentistry and orthodontics. He is an Invisalign Gold certified provider, having completed 20+ Invisalign cases per year. Dr. Webb is committed to making orthodontic treatment accessible and comfortable for teenagers and adults alike.',

@@ -11,7 +11,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const doctor = getDoctorBySlug(slug)
-  if (!doctor) return {}
+  if (!doctor) notFound()
   return {
     title: `${doctor.name} | Sunridge Dental Group`,
     description: `${doctor.bio.slice(0, 155)}...`,
