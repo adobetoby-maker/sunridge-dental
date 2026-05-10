@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import FaqAccordion from '@/components/services/FaqAccordion'
 import AppointmentCta from '@/components/services/AppointmentCta'
+import AnimatedSection from '@/components/services/AnimatedSection'
 
 export const metadata = {
   title: 'Cosmetic Dentistry | Sunridge Dental Group — Twin Falls, ID',
@@ -103,17 +104,19 @@ export default function CosmeticDentistryPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             Cosmetic Services We Offer
           </h2>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {services.map((s) => (
-              <div
-                key={s.title}
-                className="border-l-4 border-[#0EA5E9] bg-white rounded-xl shadow-sm p-6"
-              >
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{s.title}</h3>
-                <p className="text-slate-600">{s.body}</p>
-              </div>
-            ))}
-          </div>
+          <AnimatedSection>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {services.map((s) => (
+                <div
+                  key={s.title}
+                  className="border-l-4 border-[#0EA5E9] bg-white rounded-xl shadow-sm p-6"
+                >
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">{s.title}</h3>
+                  <p className="text-slate-600">{s.body}</p>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -121,6 +124,7 @@ export default function CosmeticDentistryPage() {
       <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">See the Results</h2>
+          <AnimatedSection>
           <div className="grid gap-6 sm:grid-cols-2 mb-10">
             {cases.map((c) => (
               <div key={c.title} className="rounded-xl overflow-hidden shadow-sm bg-white">
@@ -142,6 +146,7 @@ export default function CosmeticDentistryPage() {
               View Full Smile Gallery →
             </Link>
           </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -175,11 +180,16 @@ export default function CosmeticDentistryPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             Frequently Asked Questions
           </h2>
-          <FaqAccordion items={faqs} />
+          <AnimatedSection>
+            <FaqAccordion items={faqs} />
+          </AnimatedSection>
         </div>
       </section>
 
-      <AppointmentCta />
+      <AppointmentCta
+        heading="Ready to Transform Your Smile?"
+        sub="Book your complimentary consultation with Dr. Kim today."
+      />
     </>
   )
 }

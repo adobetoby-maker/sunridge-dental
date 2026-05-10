@@ -1,6 +1,7 @@
 import AppointmentCta from '@/components/services/AppointmentCta'
 import FaqAccordion from '@/components/services/FaqAccordion'
 import EmergencyContactForm from '@/components/services/EmergencyContactForm'
+import AnimatedSection from '@/components/services/AnimatedSection'
 
 export const metadata = {
   title: 'Emergency Dentistry | Sunridge Dental Group — Twin Falls, ID',
@@ -121,17 +122,19 @@ export default function EmergencyDentistryPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             Do You Have a Dental Emergency?
           </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {conditions.map((c) => (
-              <div
-                key={c.title}
-                className="border-l-4 border-[#0EA5E9] bg-white rounded-xl shadow-sm p-6"
-              >
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{c.title}</h3>
-                <p className="text-slate-600">{c.body}</p>
-              </div>
-            ))}
-          </div>
+          <AnimatedSection>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {conditions.map((c) => (
+                <div
+                  key={c.title}
+                  className="border-l-4 border-[#0EA5E9] bg-white rounded-xl shadow-sm p-6"
+                >
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">{c.title}</h3>
+                  <p className="text-slate-600">{c.body}</p>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -141,9 +144,10 @@ export default function EmergencyDentistryPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             First Aid Before You Arrive
           </h2>
+          <AnimatedSection>
           <ol className="space-y-5">
             {firstAidTips.map((tip, i) => (
-              <li key={i} className="flex items-start gap-4 bg-white rounded-xl shadow-sm p-6">
+              <li key={tip.slice(0, 20)} className="flex items-start gap-4 bg-white rounded-xl shadow-sm p-6">
                 <span
                   className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold"
                   style={{ backgroundColor: '#0EA5E9' }}
@@ -154,6 +158,7 @@ export default function EmergencyDentistryPage() {
               </li>
             ))}
           </ol>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -176,7 +181,9 @@ export default function EmergencyDentistryPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             Frequently Asked Questions
           </h2>
-          <FaqAccordion items={faqs} />
+          <AnimatedSection>
+            <FaqAccordion items={faqs} />
+          </AnimatedSection>
         </div>
       </section>
 

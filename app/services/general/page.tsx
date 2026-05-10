@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import FaqAccordion from '@/components/services/FaqAccordion'
 import AppointmentCta from '@/components/services/AppointmentCta'
+import AnimatedSection from '@/components/services/AnimatedSection'
 
 export const metadata = {
   title: 'General Dentistry | Sunridge Dental Group — Twin Falls, ID',
@@ -127,17 +128,19 @@ export default function GeneralDentistryPage() {
               We accept Delta Dental, BCBS, Cigna, Aetna, and most major insurance plans.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {services.map((s) => (
-              <div
-                key={s.title}
-                className="border-l-4 border-[#0EA5E9] bg-white rounded-xl shadow-sm p-6"
-              >
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{s.title}</h3>
-                <p className="text-slate-600">{s.body}</p>
-              </div>
-            ))}
-          </div>
+          <AnimatedSection>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {services.map((s) => (
+                <div
+                  key={s.title}
+                  className="border-l-4 border-[#0EA5E9] bg-white rounded-xl shadow-sm p-6"
+                >
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">{s.title}</h3>
+                  <p className="text-slate-600">{s.body}</p>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -147,17 +150,19 @@ export default function GeneralDentistryPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             We make dental care affordable
           </h2>
-          <div className="grid gap-6 sm:grid-cols-3">
-            {affordability.map((item) => (
-              <div
-                key={item.heading}
-                className="rounded-xl bg-sky-50 p-8 text-center"
-              >
-                <h3 className="text-lg font-bold text-slate-900 mb-3">{item.heading}</h3>
-                <p className="text-slate-600">{item.body}</p>
-              </div>
-            ))}
-          </div>
+          <AnimatedSection>
+            <div className="grid gap-6 sm:grid-cols-3">
+              {affordability.map((item) => (
+                <div
+                  key={item.heading}
+                  className="rounded-xl bg-sky-50 p-8 text-center"
+                >
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">{item.heading}</h3>
+                  <p className="text-slate-600">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -167,7 +172,9 @@ export default function GeneralDentistryPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             Frequently Asked Questions
           </h2>
-          <FaqAccordion items={faqs} />
+          <AnimatedSection>
+            <FaqAccordion items={faqs} />
+          </AnimatedSection>
         </div>
       </section>
 

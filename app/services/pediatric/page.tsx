@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import FaqAccordion from '@/components/services/FaqAccordion'
 import AppointmentCta from '@/components/services/AppointmentCta'
+import AnimatedSection from '@/components/services/AnimatedSection'
 
 export const metadata = {
   title: 'Pediatric Dentistry | Sunridge Dental Group — Twin Falls, ID',
@@ -113,6 +114,7 @@ export default function PediatricDentistryPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             What to Expect at the First Visit
           </h2>
+          <AnimatedSection>
           <div className="grid gap-6 sm:grid-cols-3">
             {visitSteps.map((step, i) => (
               <div key={step.title} className="relative bg-white rounded-xl shadow-sm p-6 border border-slate-100">
@@ -127,6 +129,7 @@ export default function PediatricDentistryPage() {
               </div>
             ))}
           </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -136,17 +139,19 @@ export default function PediatricDentistryPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             A Kid-Friendly Environment
           </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((f) => (
-              <div
-                key={f.title}
-                className="border-l-4 border-[#0EA5E9] bg-white rounded-xl shadow-sm p-6"
-              >
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{f.title}</h3>
-                <p className="text-slate-600 text-sm">{f.body}</p>
-              </div>
-            ))}
-          </div>
+          <AnimatedSection>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {features.map((f) => (
+                <div
+                  key={f.title}
+                  className="border-l-4 border-[#0EA5E9] bg-white rounded-xl shadow-sm p-6"
+                >
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">{f.title}</h3>
+                  <p className="text-slate-600 text-sm">{f.body}</p>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -156,6 +161,7 @@ export default function PediatricDentistryPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             Children We See: Ages 1 to 18
           </h2>
+          <AnimatedSection>
           <ul className="space-y-3">
             {services.map((item) => (
               <li key={item} className="flex items-start gap-3">
@@ -169,6 +175,7 @@ export default function PediatricDentistryPage() {
               </li>
             ))}
           </ul>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -178,7 +185,9 @@ export default function PediatricDentistryPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             Questions from Parents
           </h2>
-          <FaqAccordion items={faqs} />
+          <AnimatedSection>
+            <FaqAccordion items={faqs} />
+          </AnimatedSection>
         </div>
       </section>
 

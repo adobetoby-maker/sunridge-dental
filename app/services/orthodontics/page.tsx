@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import FaqAccordion from '@/components/services/FaqAccordion'
 import AppointmentCta from '@/components/services/AppointmentCta'
+import AnimatedSection from '@/components/services/AnimatedSection'
 
 export const metadata = {
   title: 'Invisalign & Orthodontics | Sunridge Dental Group — Twin Falls, ID',
@@ -124,6 +125,7 @@ export default function OrthodonticsPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             How It Works — 4 Simple Steps
           </h2>
+          <AnimatedSection>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step) => (
               <div key={step.num} className="bg-white rounded-xl shadow-sm p-6">
@@ -138,6 +140,7 @@ export default function OrthodonticsPage() {
               </div>
             ))}
           </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -161,17 +164,19 @@ export default function OrthodonticsPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             Who Is Invisalign Right For?
           </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {qualifyCards.map((card) => (
-              <div
-                key={card.title}
-                className="border-l-4 border-[#0EA5E9] bg-white rounded-xl shadow-sm p-6"
-              >
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{card.title}</h3>
-                <p className="text-slate-600 text-sm">{card.body}</p>
-              </div>
-            ))}
-          </div>
+          <AnimatedSection>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {qualifyCards.map((card) => (
+                <div
+                  key={card.title}
+                  className="border-l-4 border-[#0EA5E9] bg-white rounded-xl shadow-sm p-6"
+                >
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">{card.title}</h3>
+                  <p className="text-slate-600 text-sm">{card.body}</p>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -208,7 +213,9 @@ export default function OrthodonticsPage() {
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">
             Frequently Asked Questions
           </h2>
-          <FaqAccordion items={faqs} />
+          <AnimatedSection>
+            <FaqAccordion items={faqs} />
+          </AnimatedSection>
         </div>
       </section>
 
