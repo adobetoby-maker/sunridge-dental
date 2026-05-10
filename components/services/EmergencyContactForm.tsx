@@ -47,7 +47,7 @@ export default function EmergencyContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-1">
-            Name <span className="text-red-500">*</span>
+            Name <span className="text-[#0EA5E9]">*</span>
           </label>
           <input
             id="name"
@@ -62,7 +62,7 @@ export default function EmergencyContactForm() {
         </div>
         <div>
           <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-1">
-            Phone <span className="text-red-500">*</span>
+            Phone <span className="text-[#0EA5E9]">*</span>
           </label>
           <input
             id="phone"
@@ -79,7 +79,7 @@ export default function EmergencyContactForm() {
 
       <div>
         <label htmlFor="description" className="block text-sm font-semibold text-slate-700 mb-1">
-          Brief description of emergency <span className="text-red-500">*</span>
+          Brief description of emergency <span className="text-[#0EA5E9]">*</span>
         </label>
         <textarea
           id="description"
