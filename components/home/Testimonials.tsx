@@ -43,7 +43,7 @@ const cardVariants = {
 
 export default function Testimonials() {
   return (
-    <section className="py-20" style={{ backgroundColor: '#F8FAFC' }}>
+    <section className="py-20 bg-slate-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-slate-900">What Patients Are Saying</h2>
@@ -56,9 +56,9 @@ export default function Testimonials() {
           whileInView="visible"
           viewport={{ once: true, amount: 0 }}
         >
-          {testimonials.map((t, i) => (
+          {testimonials.map((t) => (
             <motion.div
-              key={i}
+              key={t.author}
               variants={cardVariants}
               className="rounded-xl bg-white p-7 shadow-sm flex flex-col gap-3"
             >

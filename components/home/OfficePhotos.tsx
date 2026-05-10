@@ -9,8 +9,8 @@ const photos = [
     alt: 'Modern dental treatment room at Sunridge Dental',
   },
   {
-    src: 'https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&auto=format&fit=crop',
-    alt: 'Dentist and dental assistant at work',
+    src: 'https://images.unsplash.com/MLJHxQ5qxxY?w=1200&auto=format&fit=crop',
+    alt: 'Happy patient with clear aligners at Sunridge Dental',
   },
   {
     src: 'https://images.unsplash.com/4_mJ1TbMK8A?w=1200&auto=format&fit=crop',

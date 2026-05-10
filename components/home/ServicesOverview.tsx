@@ -58,7 +58,7 @@ const cardVariants = {
 
 export default function ServicesOverview() {
   return (
-    <section className="py-20" style={{ backgroundColor: '#F8FAFC' }}>
+    <section className="py-20 bg-slate-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-slate-900">Everything Your Family Needs</h2>

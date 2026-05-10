@@ -36,12 +36,12 @@ export default function TrustStrip() {
           viewport={{ once: true, amount: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {items.map((item, i) => (
+          {items.map((item) => (
             <div
-              key={i}
+              key={item.stat}
               className="flex flex-col items-center gap-1 text-center min-w-[140px]"
             >
-              <span className="text-3xl">{item.icon}</span>
+              <span className="text-3xl" aria-hidden="true">{item.icon}</span>
               <span className="text-lg font-bold text-slate-900">{item.stat}</span>
               <span className="text-sm text-slate-500">{item.desc}</span>
             </div>
